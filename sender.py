@@ -25,8 +25,8 @@ class Sender(object):
 		#need to test for >0 b/c negative reinforcements
 		if self.strategy[prevChoice[0], sum(prevChoice[1])] + amount > 0:
 			self.strategy[prevChoice[0], sum(prevChoice[1])] += amount
-		if self._recordStrats:
-                    self.recordStrategy()
+			if self._recordStrats:
+				self.recordStrategy()
 
 	def getNormalizedStrategy(self):
 		return util.matNormalize(self.strategy)
